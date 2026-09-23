@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+sqlalchemy>=2.0
+pydantic>=2.7
+pydantic-settings>=2.3
+openai>=1.40
+PyJWT>=2.8
+pymysql>=1.1
+cryptography>=42.0

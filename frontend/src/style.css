@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  color: #303133;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+/* 双极维度条：pole1 在左，pole2 在右，填充从中心伸向占优一侧 */
+.bipolar-track {
+  position: relative;
+  height: 14px;
+  border-radius: 7px;
+  background: #e4e7ed;
+  overflow: hidden;
+}
+
+.bipolar-track::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #c0c4cc;
+}
+
+.bipolar-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 4px;
+}
+
+.bipolar-fill.pole1 {
+  background: linear-gradient(90deg, #409eff, #66b1ff);
+}
+
+.bipolar-fill.pole2 {
+  background: linear-gradient(90deg, #f3b2b5, #f56c6c);
+}
